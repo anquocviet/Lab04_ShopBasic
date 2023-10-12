@@ -1,22 +1,15 @@
-import { useState } from "react";
-import {
-   Image,
-   StyleSheet,
-   Text,
-   TextInput,
-   TouchableOpacity,
-   View,
-} from "react-native";
+import { useState } from 'react';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function GUI_Login() {
    const login = [
       {
-         username: "anquocviet",
-         password: "12345",
+         username: 'anquocviet',
+         password: '12345',
       },
       {
-         username: "vietiuh",
-         password: "1234567",
+         username: 'vietiuh',
+         password: '1234567',
       },
    ];
    const [username, setUsername] = useState();
@@ -26,31 +19,13 @@ export default function GUI_Login() {
       <View style={styles.container}>
          <Text style={styles.header}>LOGIN</Text>
          <View style={styles.inputContainer}>
-            <Image
-               style={styles.iconInputLeft}
-               source={require("../assets/avatar_user.png")}
-            />
-            <TextInput
-               value={username}
-               style={styles.input}
-               placeholder="Name"
-               onBlur={() => setUsername(this.value)}
-            />
+            <Image style={styles.iconInputLeft} source={require('../assets/avatar_user.png')} />
+            <TextInput value={username} style={styles.input} placeholder="Name" />
          </View>
          <View style={styles.inputContainer}>
-            <Image
-               style={styles.iconInputLeft}
-               source={require("../assets/lock.png")}
-            />
-            <TextInput
-               value={password}
-               style={styles.input}
-               placeholder="Password"
-            />
-            <Image
-               style={styles.iconInputRight}
-               source={require("../assets/eye.png")}
-            />
+            <Image style={styles.iconInputLeft} source={require('../assets/lock.png')} />
+            <TextInput value={password} style={styles.input} placeholder="Password" />
+            <Image style={styles.iconInputRight} source={require('../assets/eye.png')} />
          </View>
          <TouchableOpacity onPress={checklogin} style={styles.btn}>
             <Text style={styles.btnText}>LOGIN</Text>
@@ -63,24 +38,24 @@ export default function GUI_Login() {
 const styles = StyleSheet.create({
    container: {
       flex: 1,
-      alignItems: "center",
-      backgroundImage: "linear-gradient(180deg, #FBCB00 0%, #BF9A00 100%)",
+      alignItems: 'center',
+      backgroundImage: 'linear-gradient(180deg, #FBCB00 0%, #BF9A00 100%)',
    },
    header: {
       fontSize: 30,
-      fontWeight: "700",
-      alignSelf: "flex-start",
+      fontWeight: '700',
+      alignSelf: 'flex-start',
       marginTop: 75,
       marginBottom: 82,
    },
    inputContainer: {
       marginBottom: 20,
       borderWidth: 1,
-      borderColor: "#f2f2f2",
+      borderColor: '#f2f2f2',
       width: 330,
       height: 54,
-      flexDirection: "row",
-      alignItems: "center",
+      flexDirection: 'row',
+      alignItems: 'center',
    },
    iconInputLeft: {
       width: 32,
@@ -89,7 +64,7 @@ const styles = StyleSheet.create({
    },
    input: {
       flex: 1,
-      height: "100%",
+      height: '100%',
       outlineWidth: 0,
       paddingLeft: 20,
    },
@@ -101,18 +76,18 @@ const styles = StyleSheet.create({
    btn: {
       width: 330,
       height: 45,
-      backgroundColor: "#000",
-      justifyContent: "center",
-      alignItems: "center",
+      backgroundColor: '#000',
+      justifyContent: 'center',
+      alignItems: 'center',
    },
    btnText: {
       fontSize: 20,
-      fontWeight: "700",
-      color: "#fff",
+      fontWeight: '700',
+      color: '#fff',
    },
    forgotText: {
       fontSize: 20,
-      fontWeight: "700",
+      fontWeight: '700',
       marginTop: 45,
    },
 });
